@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96A6F295-5CB4-4852-8C2D-1A61118312E9}</ProjectGuid>
+    <ProjectGuid>{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CommandNetworking</RootNamespace>
-    <AssemblyName>CommandNetworking</AssemblyName>
+    <RootNamespace>FastLogger</RootNamespace>
+    <AssemblyName>FastLogger</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,16 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
-    <Compile Include="NetworkUnit.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FastLogger\FastLogger.csproj">
-      <Project>{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}</Project>
-      <Name>FastLogger</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
