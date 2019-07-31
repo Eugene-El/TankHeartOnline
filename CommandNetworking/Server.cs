@@ -15,7 +15,7 @@ namespace CommandNetworking
         protected ManualResetEvent _allDone = new ManualResetEvent(false);
         protected int _port;
 
-        public Server(int port = 11000)
+        public Server(int port = 11001)
         {
             _port = port;
         }
@@ -23,7 +23,7 @@ namespace CommandNetworking
         public void StartListening()
         {
             IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
-            IPAddress ipAddress = ipHostInfo.AddressList[0];
+            IPAddress ipAddress = ipHostInfo.AddressList.FirstOrDefault();
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, _port);
 
             Socket listener = new Socket(ipAddress.AddressFamily,
@@ -33,6 +33,7 @@ namespace CommandNetworking
             {
                 listener.Bind(localEndPoint);
                 listener.Listen(100);
+                Logger.Instance.Log(string.Format("Strted on {0}:{1}", ipAddress.ToString(), _port));
 
                 while (true)
                 {

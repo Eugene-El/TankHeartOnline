@@ -23,6 +23,8 @@ namespace FastLogger
 
         public void Log(string message)
         {
+            if (!message.EndsWith("\n"))
+                message += "\n";
             using (StreamWriter writer = File.AppendText("logs.txt"))
             {
                 writer.Write("[{0}] {1}", DateTime.UtcNow.ToShortDateString()

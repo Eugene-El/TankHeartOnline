@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandNetworking", "Comman
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastLogger", "FastLogger\FastLogger.csproj", "{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankHeartOnlineClient", "TankHeartOnlineClient\TankHeartOnlineClient.csproj", "{8CF4F058-B436-4F8F-BB13-22E5B92477F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankHeartOnlineConsoleServer", "TankHeartOnlineConsoleServer\TankHeartOnlineConsoleServer.csproj", "{E0F3CA1D-A643-4DB1-9CDD-E78767397F42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF4F058-B436-4F8F-BB13-22E5B92477F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF4F058-B436-4F8F-BB13-22E5B92477F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF4F058-B436-4F8F-BB13-22E5B92477F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF4F058-B436-4F8F-BB13-22E5B92477F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F3CA1D-A643-4DB1-9CDD-E78767397F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F3CA1D-A643-4DB1-9CDD-E78767397F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F3CA1D-A643-4DB1-9CDD-E78767397F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F3CA1D-A643-4DB1-9CDD-E78767397F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
