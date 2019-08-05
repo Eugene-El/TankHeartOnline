@@ -8,11 +8,23 @@
         Title="Game Lobby" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <TextBox
+            <StackPanel 
+                Margin="25px"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+                <TextBox
                 x:Name="ipTxt"
-                Width="150"
+                Width="200"
                 ToolTip="IP">
-            </TextBox>
+                </TextBox>
+                <Button
+                    x:Name="SetLocalBtn"
+                    Content="Set local address"
+                    Padding="20 0"
+                    Margin="10 0"
+                    Click="SetLocalBtn_Click">
+                </Button>
+            </StackPanel>
             <Button
                 x:Name="GetLobbiesBtn"
                 Content="Get lobbies"

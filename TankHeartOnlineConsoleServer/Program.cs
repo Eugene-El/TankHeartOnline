@@ -11,7 +11,7 @@ namespace TankHeartOnlineConsoleServer
     {
         static void Main(string[] args)
         {
-            new Server().StartListening();
+            new TankHeartServer().StartListening();
         }
     }
 }
