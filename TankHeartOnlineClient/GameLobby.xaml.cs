@@ -1,7 +1,9 @@
 ﻿using CommandNetworking.Logic;
+using System;
 using System.Linq;
 using System.Net;
 using System.Windows;
+using TankHeartOnlineClient.Logic;
 
 namespace TankHeartOnlineClient
 {
@@ -15,14 +17,27 @@ namespace TankHeartOnlineClient
             InitializeComponent();
         }
 
-        private void GetLobbiesBtn_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            new Client(ipTxt.Text).StartClient();
+            var configuration = ConfigurationManager.Instance.GetConfiguration();
+            if (string.IsNullOrEmpty(configuration.Ip) || string.IsNullOrEmpty(configuration.Port))
+                StateLabel.Content = "Configuration not setted";
         }
 
-        private void SetLocalBtn_Click(object sender, RoutedEventArgs e)
+        private void DisconnectLbl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            ipTxt.Text = Dns.GetHostEntry(Dns.GetHostName()).AddressList.FirstOrDefault().ToString();
+            Application.Current.Shutdown();
         }
+
+        private void ConfigurationLbl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Uri("Pages/ConfigurationPage.xaml", UriKind.Relative));
+        }
+
+        //private void GetLobbiesBtn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    new Client(ipTxt.Text).StartClient();
+        //}
+
     }
 }

@@ -62,12 +62,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\Configuration.cs" />
     <Compile Include="GameLobby.xaml.cs">
       <DependentUpon>GameLobby.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ConfigurationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\ConfigurationManager.cs" />
+    <Compile Include="Logic\FileManager.cs" />
+    <Compile Include="Pages\ConfigurationPage.xaml.cs">
+      <DependentUpon>ConfigurationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -97,6 +107,10 @@
     <ProjectReference Include="..\CommandNetworking\CommandNetworking.csproj">
       <Project>{96A6F295-5CB4-4852-8C2D-1A61118312E9}</Project>
       <Name>CommandNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FastLogger\FastLogger.csproj">
+      <Project>{CF56B9D8-7BF3-4226-A977-CC32C55EE8C7}</Project>
+      <Name>FastLogger</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

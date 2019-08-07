@@ -5,32 +5,86 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TankHeartOnlineClient"
         mc:Ignorable="d"
-        Title="Game Lobby" Height="450" Width="800">
+        Title="Game Lobby" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="DarkBlue" Offset="0"/>
+                        <GradientStop Color="Blue" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Trebuchet MS" />
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <StackPanel>
-            <StackPanel 
-                Margin="25px"
-                Orientation="Horizontal"
-                HorizontalAlignment="Center">
-                <TextBox
-                x:Name="ipTxt"
-                Width="200"
-                ToolTip="IP">
-                </TextBox>
-                <Button
-                    x:Name="SetLocalBtn"
-                    Content="Set local address"
-                    Padding="20 0"
-                    Margin="10 0"
-                    Click="SetLocalBtn_Click">
-                </Button>
-            </StackPanel>
-            <Button
-                x:Name="GetLobbiesBtn"
-                Content="Get lobbies"
-                Width="100" Height="40"
-                Click="GetLobbiesBtn_Click">
-            </Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            LastChildFill="False">
+            <DockPanel.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="DarkBlue" Offset="0"/>
+                    <GradientStop Color="Blue" Offset="0.5"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+            <Label
+                Content="Tank Heart Online" 
+                FontSize="22"/>
+
+            <Label
+                x:Name="DisconnectLbl"
+                Content="Disconnect"
+                DockPanel.Dock="Right"
+                Cursor="Hand"
+                FontSize="16"
+                MouseLeftButtonUp="DisconnectLbl_MouseLeftButtonUp"/>
+            <Label
+                x:Name="ConfigurationLbl"
+                Content="Configuration"
+                DockPanel.Dock="Right"
+                Cursor="Hand"
+                FontSize="16"
+                MouseLeftButtonUp="ConfigurationLbl_MouseLeftButtonUp"/>
+        </DockPanel>
+
+        <Frame 
+            x:Name="MainFrame"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"/>
+
+        <StackPanel
+            Grid.Row="2"
+            Grid.ColumnSpan="2">
+            <StackPanel.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="DarkBlue" Offset="0"/>
+                    <GradientStop Color="Blue" Offset="0.5"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label
+                x:Name="StateLabel"
+                Content="Connecting ..."
+                FontSize="10"/>
         </StackPanel>
     </Grid>
 </Window>
