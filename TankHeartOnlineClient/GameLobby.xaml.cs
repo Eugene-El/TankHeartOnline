@@ -22,6 +22,7 @@ namespace TankHeartOnlineClient
             var configuration = ConfigurationManager.Instance.GetConfiguration();
             if (string.IsNullOrEmpty(configuration.Ip) || string.IsNullOrEmpty(configuration.Port))
                 StateLabel.Content = "Configuration not setted";
+            MainFrame.NavigationService.Navigate(new Uri("Pages/LobbyPage.xaml", UriKind.Relative));
         }
 
         private void DisconnectLbl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -32,6 +33,11 @@ namespace TankHeartOnlineClient
         private void ConfigurationLbl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             MainFrame.NavigationService.Navigate(new Uri("Pages/ConfigurationPage.xaml", UriKind.Relative));
+        }
+
+        private void Label_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Uri("Pages/LobbyPage.xaml", UriKind.Relative));
         }
 
         //private void GetLobbiesBtn_Click(object sender, RoutedEventArgs e)

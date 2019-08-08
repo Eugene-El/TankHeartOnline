@@ -9,7 +9,7 @@
       Title="ConfigurationPage"
       Loaded="Page_Loaded">
 
-    <Grid Background="Aqua">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
@@ -30,10 +30,11 @@
                 x:Name="IpBox"/>
             <Label
                 x:Name="SetLocalLbl"
-                Content="Set local"
                 HorizontalAlignment="Right"
                 Cursor="Hand"
-                MouseLeftButtonUp="SetLocalLbl_MouseLeftButtonUp"/>
+                MouseLeftButtonUp="SetLocalLbl_MouseLeftButtonUp">
+                <TextBlock TextDecorations="Underline">Set local</TextBlock>
+            </Label>
             <Label Content="Port:"/>
             <TextBox
                 x:Name="PortBox"/>

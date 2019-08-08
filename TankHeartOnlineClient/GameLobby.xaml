@@ -8,17 +8,17 @@
         Title="Game Lobby" Height="450" Width="800"
         Loaded="Window_Loaded">
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
+        <!--<Style TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White" />
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Color="DarkBlue" Offset="0"/>
-                        <GradientStop Color="Blue" Offset="0.5"/>
+                        <GradientStop Color="#0D1321" Offset="0"/>
+                        <GradientStop Color="#1D2D44" Offset="0.5"/>
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
-        </Style>
+        </Style>-->
         <Style TargetType="{x:Type Label}">
             <Setter Property="FontFamily" Value="Trebuchet MS" />
             <Setter Property="FontWeight" Value="Bold"/>
@@ -43,13 +43,15 @@
             LastChildFill="False">
             <DockPanel.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="DarkBlue" Offset="0"/>
-                    <GradientStop Color="Blue" Offset="0.5"/>
+                    <GradientStop Color="#0D1321" Offset="0"/>
+                    <GradientStop Color="#283E5E" Offset="0.5"/>
                 </LinearGradientBrush>
             </DockPanel.Background>
             <Label
                 Content="Tank Heart Online" 
-                FontSize="22"/>
+                FontSize="22"
+                Cursor="Hand"
+                MouseLeftButtonUp="Label_MouseLeftButtonUp"/>
 
             <Label
                 x:Name="DisconnectLbl"
@@ -70,15 +72,17 @@
         <Frame 
             x:Name="MainFrame"
             Grid.Row="1"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2"
+            NavigationUIVisibility="Hidden"
+            Background="#748CAB"/>
 
         <StackPanel
             Grid.Row="2"
             Grid.ColumnSpan="2">
             <StackPanel.Background>
                 <LinearGradientBrush>
-                    <GradientStop Color="DarkBlue" Offset="0"/>
-                    <GradientStop Color="Blue" Offset="0.5"/>
+                    <GradientStop Color="#0D1321" Offset="0"/>
+                    <GradientStop Color="#283E5E" Offset="0.5"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label
