@@ -3,10 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TankHeartOnlineClient"
+        xmlns:local="clr-namespace:TankHeartOnlineClient.Mvvm.ViewModels"
         mc:Ignorable="d"
         Title="Game Lobby" Height="450" Width="800"
         Loaded="Window_Loaded">
+    <Window.DataContext>
+        <local:GameLobbyViewModel/>
+    </Window.DataContext>
     <Window.Resources>
         <!--<Style TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White" />
@@ -87,7 +90,7 @@
             </StackPanel.Background>
             <Label
                 x:Name="StateLabel"
-                Content="Connecting ..."
+                Content="{Binding Status, Mode=OneWay}"
                 FontSize="10"/>
         </StackPanel>
     </Grid>

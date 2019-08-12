@@ -80,6 +80,8 @@
     <Compile Include="Logic\ConfigurationManager.cs" />
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\TankHeartClient.cs" />
+    <Compile Include="Mvvm\Models\GameLobbyModel.cs" />
+    <Compile Include="Mvvm\ViewModels\GameLobbyViewModel.cs" />
     <Compile Include="Pages\ConfigurationPage.xaml.cs">
       <DependentUpon>ConfigurationPage.xaml</DependentUpon>
     </Compile>
@@ -121,5 +123,6 @@
       <Name>FastLogger</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
