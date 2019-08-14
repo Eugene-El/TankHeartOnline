@@ -80,7 +80,11 @@
     <Compile Include="Logic\ConfigurationManager.cs" />
     <Compile Include="Logic\FileManager.cs" />
     <Compile Include="Logic\TankHeartClient.cs" />
+    <Compile Include="Mvvm\Common\NotifyBase.cs" />
+    <Compile Include="Mvvm\Common\WpfCommand.cs" />
+    <Compile Include="Mvvm\Models\ConfigurationModel.cs" />
     <Compile Include="Mvvm\Models\GameLobbyModel.cs" />
+    <Compile Include="Mvvm\ViewModels\ConfigurationViewModel.cs" />
     <Compile Include="Mvvm\ViewModels\GameLobbyViewModel.cs" />
     <Compile Include="Pages\ConfigurationPage.xaml.cs">
       <DependentUpon>ConfigurationPage.xaml</DependentUpon>

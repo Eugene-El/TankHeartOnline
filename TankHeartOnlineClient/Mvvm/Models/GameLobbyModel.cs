@@ -4,19 +4,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TankHeartOnlineClient.Mvvm.Common;
 
 namespace TankHeartOnlineClient.Mvvm.Models
 {
-    public class GameLobbyModel : INotifyPropertyChanged
+    public class GameLobbyModel : NotifyBase
     {
-        // Mvvm property changed event
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        //
-
         // Singleton
         private static GameLobbyModel _instance;
         public static GameLobbyModel Instance
